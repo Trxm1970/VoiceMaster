@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoiceMaster AI - KTC</title>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#facc15" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="VoiceMaster" />
+    <link rel="apple-touch-icon" href="https://picsum.photos/seed/voicemaster/192/192" />
+    <link rel="icon" href="https://picsum.photos/seed/voicemaster/32/32" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load lamejs as a global script to fix scoping issues with MPEGMode -->
+    <script src="https://cdn.jsdelivr.net/npm/lamejs@1.2.1/lame.all.min.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#fffdf0',
+                100: '#fffbc2',
+                200: '#fff385',
+                300: '#ffdf47',
+                400: '#facc15', // Vibrant Yellow 400
+                500: '#eab308', // Gold/Yellow 500
+                600: '#ca8a04',
+                700: '#a16207',
+                800: '#854d0e',
+                900: '#713f12',
+              },
+              navy: {
+                700: '#1e293b',
+                800: '#16254a', // Darker navy for cards
+                900: '#0d1b3e', // Deep Navy background
+                950: '#0a1428', // Darkest navy for footer
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0d1b3e;
+        color: #f0f6fc;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a1428; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #eab308; 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #facc15; 
+      }
+      
+      .custom-audio::-webkit-media-controls-panel {
+        background-color: #16254a;
+      }
+      .custom-audio::-webkit-media-controls-current-time-display,
+      .custom-audio::-webkit-media-controls-time-remaining-display {
+        color: #facc15;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@3.11.174",
+    "mammoth": "https://esm.sh/mammoth@1.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

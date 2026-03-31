@@ -1,0 +1,5 @@
+{
+  "name": "Remix: VoiceMaster AI - Minh",
+  "description": "AI Text Refiner for VoiceMaster AI - KTC. Converts raw text into high-quality SSML for WaveNet TTS with natural prosody and strict formatting rules.",
+  "requestFramePermissions": []
+}
